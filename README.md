@@ -1,8 +1,5 @@
 # How-to-control-the-visibility-of-all-series-with-a-single-legend-item-in-Cartesian-chart
-This article in the Syncfusion Knowledge Base explains how to control the visibility of all series with a single legend item in Cartesian chart
-
 This article will explain the step to control the visibility of all series with a single legend item in a [Cartesian chart](https://www.syncfusion.com/maui-controls/maui-cartesian-charts).
-
 **Step 1:** Initialize the [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) and set the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) as true to control the series visibility.
 
 **[XAML]**
@@ -17,23 +14,20 @@ This article will explain the step to control the visibility of all series with 
 ```
 <chart:SfCartesianChart>
 . . .
-    <chart:LineSeries x:Name="series1" ItemsSource="{Binding Data1}" 
-                      IsVisibleOnLegend="True"
-                      XBindingPath="XValue" 
-                      YBindingPath="YValue"
-                      Label="Series1"/>
+    <chart:ColumnSeries x:Name="series1" ItemsSource="{Binding Data1}" 
+                        IsVisibleOnLegend="True"
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue"/>
 
-    <chart:LineSeries ItemsSource="{Binding Data2}"
-                      IsVisibleOnLegend="False"
-                      XBindingPath="XValue" 
-                      YBindingPath="YValue"
-                      Label="Series2"/>
+    <chart:ColumnSeries ItemsSource="{Binding Data2}"
+                        IsVisibleOnLegend="False"
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue"/>
 
-    <chart:LineSeries ItemsSource="{Binding Data3}" 
-                      IsVisibleOnLegend="False"
-                      XBindingPath="XValue" 
-                      YBindingPath="YValue" 
-                      Label="Series3"/>
+    <chart:ColumnSeries ItemsSource="{Binding Data3}" 
+                        IsVisibleOnLegend="False"
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue" />
     
 </chart:SfCartesianChart>
 ```
@@ -46,25 +40,25 @@ Binding the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Char
 ```
 <chart:SfCartesianChart>
 . . .
-    <chart:LineSeries x:Name="series1" ItemsSource="{Binding Data1}" 
-                      IsVisibleOnLegend="True"
-                      XBindingPath="XValue" 
-                      YBindingPath="YValue"
-                      Label="Series1"/>
+    <chart:ColumnSeries x:Name="series1" ItemsSource="{Binding Data1}" 
+                        IsVisibleOnLegend="True"
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue"
+                        Label="Series1"/>
 
-    <chart:LineSeries ItemsSource="{Binding Data2}"
-                      IsVisible="{Binding Path=IsVisible, Source={x:Reference series1}}"
-                      IsVisibleOnLegend="False"
-                      XBindingPath="XValue" 
-                      YBindingPath="YValue"
-                      Label="Series2"/>
+    <chart:ColumnSeries ItemsSource="{Binding Data2}"
+                        IsVisible="{Binding Path=IsVisible, Source={x:Reference series1}}"
+                        IsVisibleOnLegend="False"
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue"
+                        Label="Series2"/>
 
-    <chart:LineSeries ItemsSource="{Binding Data3}" 
-                      IsVisible="{Binding Path=IsVisible, Source={x:Reference series1}}"
-                      IsVisibleOnLegend="False"
-                      XBindingPath="XValue" 
-                      YBindingPath="YValue" 
-                      Label="Series3"/>
+    <chart:ColumnSeries ItemsSource="{Binding Data3}" 
+                        IsVisible="{Binding Path=IsVisible, Source={x:Reference series1}}"
+                        IsVisibleOnLegend="False"
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue" 
+                        Label="Series3"/>
                       
 </chart:SfCartesianChart>
 ```
@@ -75,27 +69,27 @@ Without binding, you can also control all the series visibility by binding the s
 ```
 <chart:SfCartesianChart>
 . . .
-    <chart:LineSeries x:Name="series1" 
-                      ItemsSource="{Binding Data1}" 
-                      IsVisible="{Binding IsSeriesVisible, Mode=TwoWay}"
-                      IsVisibleOnLegend="True"
-                      XBindingPath="XValue" 
-                      YBindingPath="YValue"
-                      Label="Series1"/>
+    <chart:ColumnSeries x:Name="series1" 
+                        ItemsSource="{Binding Data1}" 
+                        IsVisible="{Binding IsSeriesVisible, Mode=TwoWay}"
+                        IsVisibleOnLegend="True"
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue"
+                        Label="Series1"/>
 
-    <chart:LineSeries ItemsSource="{Binding Data2}"
-                      IsVisible="{Binding IsSeriesVisible}"
-                      IsVisibleOnLegend="False"
-                      XBindingPath="XValue" 
-                      YBindingPath="YValue"
-                      Label="Series2"/>
+    <chart:ColumnSeries ItemsSource="{Binding Data2}"
+                        IsVisible="{Binding IsSeriesVisible}"
+                        IsVisibleOnLegend="False"
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue"
+                        Label="Series2"/>
 
-    <chart:LineSeries ItemsSource="{Binding Data3}" 
-                      IsVisible="{Binding IsSeriesVisible}"
-                      IsVisibleOnLegend="False"
-                      XBindingPath="XValue" 
-                      YBindingPath="YValue" 
-                      Label="Series3"/>
+    <chart:ColumnSeries ItemsSource="{Binding Data3}" 
+                        IsVisible="{Binding IsSeriesVisible}"
+                        IsVisibleOnLegend="False"
+                        XBindingPath="XValue" 
+                        YBindingPath="YValue" 
+                        Label="Series3"/>
                       
 </chart:SfCartesianChart>
 ```
@@ -126,4 +120,4 @@ public class ViewModel : INotifyPropertyChanged
 }
 ```
 **Output**
- ![Control_the_visibility_of_all_series_with_a_single_legend.gif](https://support.syncfusion.com/kb/agent/attachment/article/15893/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxODU2Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.Fa1szVMVNt1nRJsy7ilzZM_YS3jtIdmDRyoUK79pzzg)
+ ![Control_visibility_of_all_series_with_a_single_legend.gif](https://support.syncfusion.com/kb/agent/attachment/article/15893/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIyNjE3Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.b43gOnrvNkHjeHzV9yBNJxdqBASq_qdlFGLLPW9q9BU)

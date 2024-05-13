@@ -34,22 +34,22 @@ namespace ControlSeriesVisibility
         {
             Data1 = new List<Model>()
             {
-                new Model { XValue = 1, YValue = 170 },
-                new Model { XValue = 2, YValue = 96 },
-                new Model { XValue = 3, YValue = 65 },
-                new Model { XValue = 4, YValue = 96 },
-                new Model { XValue = 5, YValue = 182 },
-                new Model { XValue = 6, YValue = 134 }
-            };
-
-            Data2 = new List<Model>()
-            {
                 new Model { XValue = 1, YValue = 70 },
                 new Model { XValue = 2, YValue = 36 },
                 new Model { XValue = 3, YValue = 25 },
                 new Model { XValue = 4, YValue = 56 },
                 new Model { XValue = 5, YValue = 42 },
                 new Model { XValue = 6, YValue = 34 }
+            };
+
+            Data2 = new List<Model>()
+            {
+                new Model { XValue = 1, YValue = 170 },
+                new Model { XValue = 2, YValue = 96 },
+                new Model { XValue = 3, YValue = 65 },
+                new Model { XValue = 4, YValue = 96 },
+                new Model { XValue = 5, YValue = 182 },
+                new Model { XValue = 6, YValue = 134 }
             };
 
             Data3 = new List<Model>()
