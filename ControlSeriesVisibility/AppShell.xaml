@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ControlSeriesVisibility.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ControlSeriesVisibility"
+    Shell.FlyoutBehavior="Disabled"
+    Title="ControlSeriesVisibility">
+
+    <TabBar>
+        
+        <ShellContent
+        Title="Solution 1"
+        ContentTemplate="{DataTemplate local:Solution1}"
+        Route="Solution1"/>
+
+        <ShellContent
+        Title="Solution 2"
+        ContentTemplate="{DataTemplate local:Solution2}"
+        Route="Solution2"/>
+
+    </TabBar>
+
+</Shell>
